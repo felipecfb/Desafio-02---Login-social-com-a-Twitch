@@ -34,10 +34,6 @@ export function SignIn() {
     }
   }
 
-  const signInButtonProps = {
-    onPress: handleSignIn(),
-  };
-
   return (
     <Container
       from={{
@@ -69,7 +65,7 @@ export function SignIn() {
             interessantes sobre{"\n"}o mundo da Twitch
           </Description>
 
-          <SignInButton {...signInButtonProps}>
+          <SignInButton onPress={handleSignIn}>
             <SignInButtonIcon>
               {isLoggingIn ? (
                 <ActivityIndicator size={20} color={theme.colors.white} />
